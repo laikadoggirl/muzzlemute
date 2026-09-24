@@ -10,7 +10,7 @@
     display: none;
 }
 
-/* Replace it with the dog muzzle image */
+/* Replace muted with the dog muzzle image */
 [class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="true"] [class*="lottieIcon_"]::after {
     content: "";
     display: block;
@@ -18,6 +18,19 @@
     height: 21px;
     scale: 1.2;
     background-image: url("https://raw.githubusercontent.com/laikadoggirl/muzzlemute/refs/heads/main/muzzled.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Replace unmuted with the puppy image */
+[class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="false"] [class*="lottieIcon_"]::after {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    scale: 1.2;
+    background-image: url("https://raw.githubusercontent.com/laikadoggirl/muzzlemute/refs/heads/main/puppy.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
