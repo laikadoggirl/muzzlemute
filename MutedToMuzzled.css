@@ -24,6 +24,11 @@
 }
 
 /* Replace unmuted with the puppy image */
+[class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) 
+> button[role="switch"][aria-checked="false"] 
+[class*="lottieIcon_"] svg {
+    display: none !important;
+}
 [class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="false"] [class*="lottieIcon_"]::after {
     content: "";
     display: block;
