@@ -17,7 +17,7 @@
     width: 21px;
     height: 21px;
     scale: 1.2;
-    background-image: url("https://raw.githubusercontent.com/zoez22/muzzlemute/refs/heads/main/dog.png");
+    background-image: url("https://raw.githubusercontent.com/laikadoggirl/muzzlemute/refs/heads/main/muzzled.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -37,3 +37,16 @@ body:has([class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > 
     line-height: 18px;
 }
 
+/* Swap the tooltip text for "Speak, Puppy" */
+body:has([class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="false"]:hover)
+    [class*="tooltip_"] div[data-text-variant="text-sm/medium"] {
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+body:has([class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="false"]:hover)
+    [class*="tooltip_"] div[data-text-variant="text-sm/medium"]::after {
+    content: "Speak, Puppy";
+    font-size: 14px;
+    line-height: 18px;
+}
